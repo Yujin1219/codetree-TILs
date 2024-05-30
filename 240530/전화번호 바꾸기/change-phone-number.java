@@ -7,7 +7,8 @@ public class Main {
         sc.useDelimiter("-");
         int x = sc.nextInt();
         int y = sc.nextInt();
+        int z = sc.nextInt();
 
-        System.out.printf("010-"+x+"-"+y);
+        System.out.printf("010-"+z+"-"+y);
     }
 }
