@@ -8,7 +8,7 @@ public class Main {
         int b = sc.nextInt();
 
         a +=87;
-        b /=10;
+        b %=10;
         System.out.println(a);
         System.out.println(b);
     }
