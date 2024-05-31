@@ -5,9 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
+        int minus;
         if(a>b){
-            int minus = a-b;
-        } else int minus = b-a;
+            minus = a-b;
+        } else minus = b-a;
         System.out.println(minus);
     }
 }
