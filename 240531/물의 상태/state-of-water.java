@@ -7,7 +7,7 @@ public class Main {
        int tem = sc.nextInt();
        if(tem < 0){
         System.out.println("ice");
-       } else if(tem > 100){
+       } else if(tem >= 100){
         System.out.println("vapor");
        }else {
         System.out.println("water");
