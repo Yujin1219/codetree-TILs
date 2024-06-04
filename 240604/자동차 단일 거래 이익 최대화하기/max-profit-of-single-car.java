@@ -12,6 +12,7 @@ public class Main {
             for(int j=0;j<arr.length;j++){
                 if(i == j){
                     continue;
+                    gap = 0;
                 }
                 int tempgap = arr[i]- arr[j];
                 if(tempgap < 0){
