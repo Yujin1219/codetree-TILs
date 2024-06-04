@@ -12,13 +12,12 @@ public class Main {
             for(int j=0;j<arr.length;j++){
                 if(i == j){
                     continue;
-                    gap = 0;
                 }
-                int tempgap = arr[i]- arr[j];
+                int tempgap = arr[j]- arr[i];
                 if(tempgap < 0){
                     tempgap = 0;
                 }
-                if(gap < tempgap && j < i){
+                if(gap < tempgap ){
                     gap = tempgap;
                 }
             }
