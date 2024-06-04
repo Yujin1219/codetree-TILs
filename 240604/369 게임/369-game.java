@@ -10,10 +10,10 @@ public class Main {
             int f = i / 10;
             int s = i % 10;
 
-            if(i < 10 ){
+            if(i < 10 || s==0){
                 if(i %3 == 0){
                 System.out.print("0 ");
-                } 
+                }   
                 else{
                 System.out.print(i + " ");
                 }
