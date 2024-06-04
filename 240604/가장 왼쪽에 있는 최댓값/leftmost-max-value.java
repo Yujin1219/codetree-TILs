@@ -11,7 +11,7 @@ public class Main {
         }
 
         int idx = n - 1;
-        while (idx > 0) {
+        while (idx >= 0) {
             int max = arr[idx];
             for (int i = idx - 1; i >= 0; i--) {
                 if (max <= arr[i]) {
