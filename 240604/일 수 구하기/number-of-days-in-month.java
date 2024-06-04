@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
 
         if(n % 2 != 0) System.out.println("31");
-        else if(n == 0) System.out.println("28");
+        else if(n == 2) System.out.println("28");
         else System.out.println("30");
     }
 }
