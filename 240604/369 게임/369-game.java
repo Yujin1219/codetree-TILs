@@ -21,7 +21,7 @@ public class Main {
                 if((i %3 == 0) || (f % 3 ==0) || (s % 3 ==0)){
                 System.out.print("0 ");    
                 }
-            else{
+                else{
                 System.out.print(i+ " ");
                 }
             }
