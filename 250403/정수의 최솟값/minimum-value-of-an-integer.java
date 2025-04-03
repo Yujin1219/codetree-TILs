@@ -9,7 +9,7 @@ public class Main {
         
         int min = 0;
         min = (a < b) ? a : b;
-        min = (max < c) ? max : c;
+        min = (min < c) ? min : c;
 
         System.out.println(min);
     }
