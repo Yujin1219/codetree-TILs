@@ -11,16 +11,19 @@ public class Main {
             int i1 = i / 10;
             int i2 = i % 10;
 
-            if(i % 3 == 0 || check369(i1) || check369(i2))
+            if(i % 3 == 0 || check369(i))
                 count++;
         }
         System.out.println(count);
     }
 
-    public static boolean check369(int i){
-        if(i == 3 || i == 6 || i == 9)
+    public static boolean check369(int num){
+        while(num > 0){
+        int digit = num % 10;
+        if(digit == 3 || digit == 6 || digit == 9)
             return true;
-        else
-            return false;
+        num /= 10;
+    }
+    return false;
     }
 }
