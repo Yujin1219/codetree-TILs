@@ -1,35 +1,37 @@
-// 자릿수 합이 짝수인지 확인
-function isDigitSumEven(n) {
-    let sum = 0;
-    while (n > 0) {
-        sum += n % 10;
-        n = Math.floor(n / 10);
-    }
-    return sum % 2 === 0;
-}
-
-// 소수 판별 함수
+// 해당 숫자가 소수인지 여부를 반환하는 함수를 작성합니다.
 function isPrime(n) {
-    if (n < 2) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) return false;
+    if (n === 1) {
+        return false;
+    }
+
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
     }
     return true;
 }
 
-// 메인 함수
-function main(input) {
-    const [A, B] = input.trim().split(' ').map(Number);
-    let count = 0;
+// 자릿수의 합이 짝수인지 여부를 반환하는 함수를 작성합니다.
+function isDigitSumEven(n) {
+    let digitSum = parseInt(n / 100) + parseInt((n / 10) % 10) + (n % 10);
 
-    for (let i = A; i <= B; i++) {
-        if (isPrime(i) && isDigitSumEven(i)) {
-            count++;
-        }
+    if (digitSum % 2 === 0) {
+        return true;
     }
 
-    console.log(count);
+    return false;
 }
 
-// 예시 실행 (아래는 테스트용 입력 예시)
-main("10 30");
+// 변수 선언 및 입력
+const fs = require("fs");
+let [a, b] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
+
+let cnt = 0;
+for (let i = a; i <= b; i++) {
+    if (isPrime(i) && isDigitSumEven(i)) {
+        cnt++;
+    }
+}
+
+console.log(cnt);
